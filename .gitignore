@@ -1,0 +1,14 @@
+/Backend/node_modules/
+/Frontend/node_modules/
+
+
+# node_modules
+/Frontend/node_modules/
+/Frontend/dist/
+
+
+# package-lock.json
+/Frontend/package-lock.json
+
+# .parcel-cache/data.mdb
+/Frontend/.parcel-cache/

@@ -1,0 +1,68 @@
+/* General Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #000, #282727);
+   /* Black to dark gray gradient */ 
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #333232; /* Slightly lighter border for contrast */
+  box-shadow: 0 2px 5px rgba(10, 10, 10, 0.2); /* Subtle shadow for depth */
+}
+
+/* Logo Styling */
+.logo img {
+  height: 100px; /* Adjusted logo height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #f8f6f6; /* Light color for links to contrast with the dark background */
+  margin: 0 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ff5733; /* Bright accent color for hover and active links */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Dropdown Menu */
+.navbar-nav .dropdown-menu {
+  background: #1a1a1a; /* Dark background for dropdown */
+  border: none; /* Remove default border */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for dropdown */
+}
+
+.navbar-nav .dropdown-item {
+  color: #f0f0f0; /* Light color for dropdown items */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #ff5733; /* Bright color on hover */
+}
+
+/* Disabled Link Styling */
+.navbar-nav .nav-link.disabled {
+  color: #888; /* Gray color for disabled links */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem;
+    display: block; /* Make links stack vertically */
+  }
+
+  .logo img {
+    height: 100px; /* Adjust logo height for smaller screens */
+  }
+}

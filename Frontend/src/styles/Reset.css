@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://t3.ftcdn.net/jpg/06/09/80/60/240_F_609806064_baRooCeOn30cBClPRvrlP94SFm3OlDXM.jpg');
+}
+
+.reset-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 60px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg');
+}
+
+.reset-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.reset-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.reset-input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.reset-input:focus {
+    border-color: #d68000; 
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 167, 38, 0.5);
+}
+
+.reset-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e48b05; 
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+    background-color: #844902; 
+    transform: translateY(-2px);
+}
+
+.reset-button:active {
+    transform: translateY(0);
+    background-color: #813b02; 
+}
+
+.reset-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f55f08; /* Light orange */
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .reset-container {
+        padding: 20px;
+    }
+
+    .reset-button {
+        font-size: 16px;
+    }
+
+    .reset-message {
+        font-size: 14px;
+    }
+}

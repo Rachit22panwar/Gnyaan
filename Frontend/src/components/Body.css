@@ -1,0 +1,262 @@
+/* Body Container */
+.body {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #f7f7f7, #e6e6e6);
+    background-image: url('https://t3.ftcdn.net/jpg/06/09/80/60/240_F_609806064_baRooCeOn30cBClPRvrlP94SFm3OlDXM.jpg');
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Image Section */
+.image-section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .image-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .attractive-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  /* Hover Effect */
+  .image-container:hover .attractive-image {
+    transform: scale(1.1);
+    filter: brightness(80%);
+  }
+  
+  /* Overlay */
+  .image-container::before {
+    content: 'Explore Now';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .image-container:hover::before {
+    opacity: 1;
+  }
+  /* Get Started Section */
+  .get-started {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .get-started h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .get-started p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .get-started-button {
+    padding: 14px 36px;
+    font-size: 1.125rem;
+    color: #fff;
+    background: linear-gradient(45deg, #e46e25, #e788d7);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .get-started-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Reviews Section */
+  .reviews-section {
+    margin-top: 60px;
+  }
+  
+  .reviews-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  .reviews-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ff6f61;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  
+  .reviews {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .review-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .review-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f27324;
+  }
+  
+  .review-card h4 {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .review-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Working Process Section */
+  .working-process {
+    margin-top: 60px;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .working-process h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .process-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .step {
+    flex: 1;
+    max-width: 300px;
+    background: #fefefe;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .step:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .step-icon {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+  }
+  
+  .step h4 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    margin-top: 60px;
+  }
+  
+  .benefits h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .benefits-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .benefit {
+    flex: 1;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    background: #fefefe;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .benefit-icon {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    margin-right: 15px;
+  }
+  
+  .benefit p {
+    font-size: 1.125rem;
+    color: #555;
+  }
+  
