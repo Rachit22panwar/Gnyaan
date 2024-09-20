@@ -6,19 +6,24 @@ const { requireSignIn, isAdmin } = require("../middleware/authMiddleware");
 const router = express.Router();
 
 //routing
-// Register || Method POST
+//Regestring || Methos POST
 router.post('/register', registerController);
 
-// Login || Method POST
-router.post('/login', loginController);
+//Login || Method POST
+router.post('/login', loginController)
 
-// User authentication check route || Method GET
+//test routes
+router.get('/test', requireSignIn, isAdmin, testController);
+
+//protected user routes
 router.get('/user-auth', requireSignIn, (req, res) => {
-    // If the user is signed in, respond with success
-    res.status(200).json({ success: true });
+    res.status(200).send({ ok: true });
 });
 
-// Test routes
-router.get('/test', requireSignIn, isAdmin, testController);
+//protected Admin routes
+router.get('/admin-auth', requireSignIn, isAdmin, (req, res) => {
+    res.status(200).send({ ok: true });
+});
+
 
 module.exports = router;

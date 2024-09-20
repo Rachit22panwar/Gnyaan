@@ -1,11 +1,14 @@
 
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
+import Header from '../../components/Layout/Header';
+import Footer from '../../components/Layout/Footer';
 import AdminMenu from '../../components/Layout/AdminMenu'
 
 const Users = () => {
     return (
-        <Layout title = {'Dashboard - User Info'}>
+        <div>
+     <Header />
+        <div title = {'Dashboard - User Info'}>
             <div className='contain-fluid m-3 p-3'>
                 <div className='row'>
                     <div className='col-md-3'>
@@ -16,7 +19,9 @@ const Users = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </div>
+        <Footer />  
+        </div>
     )
 }
 

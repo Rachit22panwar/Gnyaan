@@ -3,9 +3,42 @@ import '../Body.css';
 import learnimg from './learnimg.jpg';
 import { useNavigate } from 'react-router-dom'
 import { FaCheckCircle } from 'react-icons/fa';
+import fullstackimg from './fullstackimg.png';
+import datascienceimg from './datascienceimg.jpg';
+import uiuximg from './uiuximg.jpg';
+import cloudcomputimg from './cloudcomputimg.webp';
+import cybersecurityimg from './cybersecurityimg.jpg';
 
 const Body = () => {
   const navigate = useNavigate(); 
+  const popularCourses = [
+    {
+      name: 'Full Stack Development',
+      description: 'Master frontend and backend development with hands-on projects.',
+      img: fullstackimg,
+    },
+    {
+      name: 'Data Science',
+      description: 'Learn data analysis, machine learning, and AI techniques.',
+      img: datascienceimg,
+    },
+    {
+      name: 'UI/UX Design',
+      description: 'Design user-friendly and visually appealing interfaces.',
+      img: uiuximg,
+    },
+    {
+      name: 'Cloud Computing',
+      description: 'Gain expertise in cloud platforms and services.',
+      img: cloudcomputimg,
+    },
+    {
+      name: 'Cybersecurity',
+      description: 'Learn to protect systems and networks from cyber threats.',
+      img: cybersecurityimg,
+    },
+  ];
+
   const reviews = [
     {
       name: 'John Doe',
@@ -73,6 +106,22 @@ const Body = () => {
             <h4>Get Certified</h4>
             <p>Complete the course and earn your certification to showcase your new skills to the world.</p>
           </div>
+        </div>
+      </div>
+      {/* New Popular Courses Section */}
+      <div className="popular-courses-section">
+        <h2>Popular Courses</h2>
+        <div className="courses">
+          {popularCourses.map((course, index) => (
+            <div key={index} className="course-card">
+              <img src={course.img} alt={course.name} className="course-img" />
+              <h3>{course.name}</h3>
+              <p>{course.description}</p>
+              <button className="enroll-button" onClick={() => navigate('/enroll')}>
+                Enroll Now
+              </button>
+            </div>
+          ))}
         </div>
       </div>
 

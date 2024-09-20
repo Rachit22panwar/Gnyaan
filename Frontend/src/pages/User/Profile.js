@@ -1,10 +1,13 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
+import Header from '../../components/Layout/Header';
+import Footer from '../../components/Layout/Footer';
 import UserMenu from '../../components/Layout/UserMenu'
 
 const Profile = () => {
     return (
-        <Layout title={"Your Profile"}>
+        <div>
+        <Header />
+        <div title={"Your Profile"}>
             <div className="container-fluid m-3 p-3">
                 <div className="row">
                     <div className="col-md-3">
@@ -15,7 +18,9 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </div>
+        <Footer />
+        </div>
     )
 }
 

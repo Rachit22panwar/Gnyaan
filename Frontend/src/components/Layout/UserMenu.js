@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import '../../styles/Usermenu.css';
 const UserMenu = () => {
     return (
         <div>
@@ -7,13 +8,13 @@ const UserMenu = () => {
                 <div className="list-group">
                     <h4>Dashboard</h4>
                     <NavLink
-                        to="user/profile"
+                        to="/dashboard/user/profile"
                         className="list-group-item list-group-item-action"
                     >
                         Profile
                     </NavLink>
                     <NavLink
-                        to="user/orders"
+                        to="/dashboard/user/orders"
                         className="list-group-item list-group-item-action"
                     >
                         Orders

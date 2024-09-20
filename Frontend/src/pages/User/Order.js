@@ -1,10 +1,13 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
-import UserMenu from '../../components/Layout/UserMenu'
+import Header from '../../components/Layout/Header';
+import Footer from '../../components/Layout/Footer';
+import UserMenu from '../../components/Layout/UserMenu';
 
 const Order = () => {
     return (
-        <Layout title={"Your Orders"}>
+        <div>
+        <Header />
+        <div title={"Your Orders"}>
             <div className="container-flui p-3 m-3">
                 <div className="row">
                     <div className="col-md-3">
@@ -15,7 +18,10 @@ const Order = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </div>
+        <Footer />
+        </div>
+
     )
 }
 

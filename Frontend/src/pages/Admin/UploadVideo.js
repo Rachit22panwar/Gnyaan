@@ -1,10 +1,12 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
+import Header from '../../components/Layout/Header';
+import Footer from '../../components/Layout/Footer';
 import AdminMenu from '../../components/Layout/AdminMenu'
 
 const UploadVideo = () => {
     return (
-        <Layout title={"Dashboard - Upload Video"}>
+        <div title={"Dashboard - Upload Video"}>
+        <Header />
             <div className='contain-fluid m-3 p-3'>
                 <div className='row'>
                     <div className='col-md-3'>
@@ -15,7 +17,8 @@ const UploadVideo = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+            <Footer />
+        </div>
     )
 }
 
