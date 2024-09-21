@@ -1,5 +1,5 @@
 const express = require('express');
-const { registerController, loginController, testController } = require('../controller/authController');
+const { registerController, loginController, testController , createPaymentIntent } = require('../controller/authController');
 const { requireSignIn, isAdmin } = require("../middleware/authMiddleware");
 
 //router object
@@ -24,6 +24,9 @@ router.get('/user-auth', requireSignIn, (req, res) => {
 router.get('/admin-auth', requireSignIn, isAdmin, (req, res) => {
     res.status(200).send({ ok: true });
 });
+
+// Create Payment Intent Route
+router.post('/create-payment-intent', requireSignIn, createPaymentIntent);
 
 
 module.exports = router;

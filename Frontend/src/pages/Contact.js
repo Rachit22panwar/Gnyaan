@@ -1,13 +1,18 @@
 import React from 'react';
-import Layout from '../components/Layout/Layout';
 import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
+import Header from '../components/Layout/Header';
+import Footer from '../components/Layout/Footer';
+import '../styles/Contact.css';
+import contactus from './contactus.jpg';
+
 const Contact = () => {
   return (
-    <Layout>
+    <div>
+    <Header />
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
-            src="/image/contactus.jpg"
+            src={contactus}
             alt="contactus"
             style={{ width: "100%" }}
           />
@@ -29,7 +34,8 @@ const Contact = () => {
           </p>
         </div>
       </div>
-    </Layout>
+    <Footer />
+    </div>
   );
 };
 

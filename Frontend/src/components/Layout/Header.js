@@ -74,8 +74,8 @@ const Header = () => {
                     </ul>
                   </li>
                   <li className="nav-item">
-                  <NavLink to="/cart" className="nav-link">
-                      CART(0)
+                  <NavLink to="/contact" className="nav-link">
+                      Contact
                     </NavLink>
                   </li>
                 </>
