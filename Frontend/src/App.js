@@ -16,10 +16,15 @@ import Users from './pages/Admin/Users';
 import AddLecture from './pages/Admin/AddLecture';
 import Profile from './pages/User/Profile';
 import Order from './pages/User/Order';
+import Courses from './pages/Courses';
+import Payment from './pages/Payment';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 
+const stripePromise = loadStripe('KP_public_2232');
 function App() {
   return (
-    <>
+    <Elements stripe={stripePromise}>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<About />} />
@@ -38,11 +43,13 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/Reset' element={<Reset />} />
         <Route path='/about' element={<About />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/payment' element={<Payment />} />
         <Route path='/policy' element={<Policy />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
-    </>
+    </Elements>
   );
 };
 

@@ -3,6 +3,8 @@ import '../Body.css';
 import learnimg from './learnimg.jpg';
 import { useNavigate } from 'react-router-dom'
 import { FaCheckCircle } from 'react-icons/fa';
+import { useAuth } from '../../context/auth';
+//import Courses from '../../pages/Courses';
 import fullstackimg from './fullstackimg.png';
 import datascienceimg from './datascienceimg.jpg';
 import uiuximg from './uiuximg.jpg';
@@ -10,7 +12,9 @@ import cloudcomputimg from './cloudcomputimg.webp';
 import cybersecurityimg from './cybersecurityimg.jpg';
 
 const Body = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+  const [auth] = useAuth();
+
   const popularCourses = [
     {
       name: 'Full Stack Development',
@@ -72,7 +76,21 @@ const Body = () => {
       <div className="get-started">
         <h1>Welcome to Gnyaan</h1>
         <p>Start your learning journey with us!</p>
-        <button className="get-started-button" onClick={()=>navigate('/login')}>Get Started</button>
+        <button className="get-started-button" 
+          onClick={() => {
+            if (auth?.user){
+              if(auth.user.role === true){
+                navigate('/dashboard/admin');
+
+              }else{
+                navigate('/dashboard/user');
+              }
+            }else{
+              navigate('/login');
+            }
+          }}
+        
+        > Get Started</button>
       </div>
 
       <div className="reviews-section">
@@ -117,11 +135,24 @@ const Body = () => {
               <img src={course.img} alt={course.name} className="course-img" />
               <h3>{course.name}</h3>
               <p>{course.description}</p>
-              <button className="enroll-button" onClick={() => navigate('/enroll')}>
+              <button className="enroll-button" 
+              onClick={() =>{
+                if (auth?.user){
+                  navigate('/payment');
+                }else{
+                  navigate('/login');
+                }
+              }}>
                 Enroll Now
               </button>
             </div>
           ))}
+        </div>
+         {/* View More Button */}
+         <div className="view-more-container">
+          <button className="view-more-button" onClick={() => navigate('/Courses')}>
+            View More
+          </button>
         </div>
       </div>
 
